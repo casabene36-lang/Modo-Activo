@@ -173,3 +173,483 @@
     mobileWa.href = '#maPlanner';
   }
 })();
+// ===== MODO ACTIVO: CORRECCIÓN FINAL DE TEXTOS Y NAVEGACIÓN =====
+
+(() => {
+
+  // Corrige el botón "Cumpleaños y eventos"
+
+  const eventosLink = document.querySelector(
+
+    '#navMenu a[href="#maExperienceHub"]'
+
+  );
+
+  if (eventosLink) {
+
+    eventosLink.href = '#maAgesSpace';
+
+  }
+
+  // Corrige también el acceso rápido original
+
+  const quickProposal = document.querySelector(
+
+    '.quick-info-grid a[href="#que-hacemos"]'
+
+  );
+
+  if (quickProposal) {
+
+    quickProposal.href = '#propuesta';
+
+  }
+
+  // HERO
+
+  const kicker = document.querySelector('.hero .kicker');
+
+  if (kicker) {
+
+    kicker.innerHTML =
+
+      '<span>⚡</span> CUMPLEAÑOS Y EVENTOS EN MOVIMIENTO';
+
+  }
+
+  const heroTitle = document.querySelector('.hero h1');
+
+  if (heroTitle) {
+
+    heroTitle.innerHTML =
+
+      'UN FESTEJO<br>DONDE NADIE<br><span>SE QUEDA MIRANDO.</span>';
+
+  }
+
+  const heroLead = document.querySelector('.hero .hero-lead');
+
+  if (heroLead) {
+
+    heroLead.textContent =
+
+      'Juegos, desafíos y deporte para que los chicos se muevan, se rían y vivan el festejo de principio a fin.';
+
+  }
+
+  const heroButton =
+
+    document.querySelector('.hero-actions .btn-green');
+
+  if (heroButton) {
+
+    heroButton.href =
+
+      'https://wa.me/5491167859172?text=' +
+
+      encodeURIComponent(
+
+        'Hola! 👋 Quiero consultar disponibilidad para un cumpleaños o evento con Modo Activo ⚡'
+
+      );
+
+  }
+
+  // MENSAJE PRINCIPAL
+
+  const parentEyebrow =
+
+    document.querySelector('.parent-message .eyebrow');
+
+  if (parentEyebrow) {
+
+    parentEyebrow.textContent =
+
+      'PARA QUIEN ORGANIZA EL FESTEJO';
+
+  }
+
+  // QUIÉNES SOMOS
+
+  const aboutText =
+
+    document.querySelector('#nosotros .parent-card > p');
+
+  if (aboutText) {
+
+    aboutText.textContent =
+
+      'Somos Modo Activo, una propuesta de animación deportiva y recreativa para cumpleaños y eventos de chicos de 6 a 15 años.';
+
+  }
+
+  // QUÉ HACEMOS
+
+  const proposalTitle =
+
+    document.querySelector('#propuesta h2');
+
+  if (proposalTitle) {
+
+    proposalTitle.innerHTML =
+
+      'Todo lo que necesita un festejo para entrar en <span>MODO ACTIVO.</span>';
+
+  }
+
+  // EXPERIENCIA
+
+  const experienceText =
+
+    document.querySelector(
+
+      '#experiencia .experience-top > p'
+
+    );
+
+  if (experienceText) {
+
+    experienceText.textContent =
+
+      'La idea es simple: que el festejo se sienta vivo desde que empieza.';
+
+  }
+
+  // RESERVA
+
+  const bookingNote =
+
+    document.getElementById('bookingCustomNote');
+
+  if (bookingNote) {
+
+    bookingNote.textContent =
+
+      'Cada festejo es distinto. Contanos la edad, cantidad de chicos, duración y lugar, y armamos una propuesta a medida.';
+
+  }
+
+  const bookingSteps =
+
+    document.querySelectorAll(
+
+      '#reservar .steps article p'
+
+    );
+
+  if (bookingSteps[0]) {
+
+    bookingSteps[0].textContent =
+
+      'Nos contás cuándo y dónde es el festejo.';
+
+  }
+
+  // PREGUNTAS FRECUENTES
+
+  const faqTitle =
+
+    document.querySelector('#faq .faq-intro h2');
+
+  if (faqTitle) {
+
+    faqTitle.textContent =
+
+      'Antes de poner el festejo en movimiento.';
+
+  }
+
+  document
+
+    .querySelectorAll('#faq details summary')
+
+    .forEach(summary => {
+
+      if (
+
+        summary.textContent.includes(
+
+          '¿Las actividades son iguales para todos los cumpleaños?'
+
+        )
+
+      ) {
+
+        summary.textContent =
+
+          '¿Las actividades son iguales para todos los festejos?';
+
+      }
+
+    });
+
+  // INFORMACIÓN RÁPIDA
+
+  const quickTitle =
+
+    document.querySelector(
+
+      '.quick-info-grid .quick-info-item:first-child strong'
+
+    );
+
+  if (quickTitle) {
+
+    quickTitle.textContent =
+
+      'Festejos en movimiento';
+
+  }
+
+  const quickText =
+
+    document.querySelector(
+
+      '.quick-info-grid .quick-info-item:first-child small'
+
+    );
+
+  if (quickText) {
+
+    quickText.textContent =
+
+      'Juegos, deporte y desafíos para cumpleaños y eventos donde todos participan.';
+
+  }
+
+  // CTA FINAL
+
+  const finalTitle =
+
+    document.querySelector('.final-cta h2');
+
+  if (finalTitle) {
+
+    finalTitle.textContent =
+
+      'Hacé que su próximo festejo sea uno que quieran volver a contar.';
+
+  }
+
+  const finalText =
+
+    document.querySelector('.final-cta p');
+
+  if (finalText) {
+
+    finalText.textContent =
+
+      'Deporte, juegos, amigos y movimiento. Todo en una misma experiencia.';
+
+  }
+
+  const finalButton =
+
+    document.querySelector('.final-cta .btn');
+
+  if (finalButton) {
+
+    finalButton.textContent =
+
+      'Consultar por WhatsApp';
+
+    finalButton.href =
+
+      'https://wa.me/5491167859172?text=' +
+
+      encodeURIComponent(
+
+        'Hola! 👋 Quiero consultar una fecha para un cumpleaños o evento con Modo Activo ⚡'
+
+      );
+// ===== MODO ACTIVO: CORRECCIÓN FINAL DE TEXTOS Y NAVEGACIÓN =====
+(() => {
+
+  // Corrige el botón "Cumpleaños y eventos"
+  const eventosLink = document.querySelector(
+    '#navMenu a[href="#maExperienceHub"]'
+  );
+
+  if (eventosLink) {
+    eventosLink.href = '#maAgesSpace';
+  }
+
+  // Corrige también el acceso rápido original
+  const quickProposal = document.querySelector(
+    '.quick-info-grid a[href="#que-hacemos"]'
+  );
+
+  if (quickProposal) {
+    quickProposal.href = '#propuesta';
+  }
+
+  // HERO
+  const kicker = document.querySelector('.hero .kicker');
+
+  if (kicker) {
+    kicker.innerHTML =
+      '<span>⚡</span> CUMPLEAÑOS Y EVENTOS EN MOVIMIENTO';
+  }
+
+  const heroTitle = document.querySelector('.hero h1');
+
+  if (heroTitle) {
+    heroTitle.innerHTML =
+      'UN FESTEJO<br>DONDE NADIE<br><span>SE QUEDA MIRANDO.</span>';
+  }
+
+  const heroLead = document.querySelector('.hero .hero-lead');
+
+  if (heroLead) {
+    heroLead.textContent =
+      'Juegos, desafíos y deporte para que los chicos se muevan, se rían y vivan el festejo de principio a fin.';
+  }
+
+  const heroButton =
+    document.querySelector('.hero-actions .btn-green');
+
+  if (heroButton) {
+    heroButton.href =
+      'https://wa.me/5491167859172?text=' +
+      encodeURIComponent(
+        'Hola! 👋 Quiero consultar disponibilidad para un cumpleaños o evento con Modo Activo ⚡'
+      );
+  }
+
+  // MENSAJE PRINCIPAL
+  const parentEyebrow =
+    document.querySelector('.parent-message .eyebrow');
+
+  if (parentEyebrow) {
+    parentEyebrow.textContent =
+      'PARA QUIEN ORGANIZA EL FESTEJO';
+  }
+
+  // QUIÉNES SOMOS
+  const aboutText =
+    document.querySelector('#nosotros .parent-card > p');
+
+  if (aboutText) {
+    aboutText.textContent =
+      'Somos Modo Activo, una propuesta de animación deportiva y recreativa para cumpleaños y eventos de chicos de 6 a 15 años.';
+  }
+
+  // QUÉ HACEMOS
+  const proposalTitle =
+    document.querySelector('#propuesta h2');
+
+  if (proposalTitle) {
+    proposalTitle.innerHTML =
+      'Todo lo que necesita un festejo para entrar en <span>MODO ACTIVO.</span>';
+  }
+
+  // EXPERIENCIA
+  const experienceText =
+    document.querySelector(
+      '#experiencia .experience-top > p'
+    );
+
+  if (experienceText) {
+    experienceText.textContent =
+      'La idea es simple: que el festejo se sienta vivo desde que empieza.';
+  }
+
+  // RESERVA
+  const bookingNote =
+    document.getElementById('bookingCustomNote');
+
+  if (bookingNote) {
+    bookingNote.textContent =
+      'Cada festejo es distinto. Contanos la edad, cantidad de chicos, duración y lugar, y armamos una propuesta a medida.';
+  }
+
+  const bookingSteps =
+    document.querySelectorAll(
+      '#reservar .steps article p'
+    );
+
+  if (bookingSteps[0]) {
+    bookingSteps[0].textContent =
+      'Nos contás cuándo y dónde es el festejo.';
+  }
+
+  // PREGUNTAS FRECUENTES
+  const faqTitle =
+    document.querySelector('#faq .faq-intro h2');
+
+  if (faqTitle) {
+    faqTitle.textContent =
+      'Antes de poner el festejo en movimiento.';
+  }
+
+  document
+    .querySelectorAll('#faq details summary')
+    .forEach(summary => {
+
+      if (
+        summary.textContent.includes(
+          '¿Las actividades son iguales para todos los cumpleaños?'
+        )
+      ) {
+        summary.textContent =
+          '¿Las actividades son iguales para todos los festejos?';
+      }
+
+    });
+
+  // INFORMACIÓN RÁPIDA
+  const quickTitle =
+    document.querySelector(
+      '.quick-info-grid .quick-info-item:first-child strong'
+    );
+
+  if (quickTitle) {
+    quickTitle.textContent =
+      'Festejos en movimiento';
+  }
+
+  const quickText =
+    document.querySelector(
+      '.quick-info-grid .quick-info-item:first-child small'
+    );
+
+  if (quickText) {
+    quickText.textContent =
+      'Juegos, deporte y desafíos para cumpleaños y eventos donde todos participan.';
+  }
+
+  // CTA FINAL
+  const finalTitle =
+    document.querySelector('.final-cta h2');
+
+  if (finalTitle) {
+    finalTitle.textContent =
+      'Hacé que su próximo festejo sea uno que quieran volver a contar.';
+  }
+
+  const finalText =
+    document.querySelector('.final-cta p');
+
+  if (finalText) {
+    finalText.textContent =
+      'Deporte, juegos, amigos y movimiento. Todo en una misma experiencia.';
+  }
+
+  const finalButton =
+    document.querySelector('.final-cta .btn');
+
+  if (finalButton) {
+    finalButton.textContent =
+      'Consultar por WhatsApp';
+
+    finalButton.href =
+      'https://wa.me/5491167859172?text=' +
+      encodeURIComponent(
+        'Hola! 👋 Quiero consultar una fecha para un cumpleaños o evento con Modo Activo ⚡'
+      );
+  }
+
+})();
+  }
+
+})();
