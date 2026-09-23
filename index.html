@@ -101,6 +101,25 @@
     }
   </style>
 
+
+  <style>
+    /* Acerca Quiénes somos y Cobertura para que se lean como un mismo bloque */
+    #nosotros{
+      padding-bottom:18px;
+    }
+    #cobertura{
+      padding-top:0;
+    }
+    @media(max-width:800px){
+      #nosotros{
+        padding-bottom:12px;
+      }
+      #cobertura{
+        padding-top:0;
+      }
+    }
+  </style>
+
 </head>
 <body>
   <header class="header">
@@ -548,7 +567,7 @@
       <small>© <span id="year"></span> Modo Activo</small>
     </div>
   </footer>
-<script src="script.js?v=15"></script>
+<script src="script.js?v=16"></script>
 
 <script>
 (() => {
