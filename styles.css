@@ -1,1 +1,6 @@
 @import url("./styles%203.css");
+.action-shot img[src$="modo-activo-grupo-1.jpg"] {
+
+  object-fit: cover !important;
+
+  object-position: left center !important;
