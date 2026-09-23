@@ -54,7 +54,7 @@ if ('IntersectionObserver' in window) {
         <div class="chat-content">
           <div id="queryMenu">
             <div class="bubble bot">
-              <p>👋⚡ ¡Hola! Bienvenido/a a Somos Modo Activo. ¿En qué podemos ayudarte? Elegí una opción 👇</p>
+              <p>👋⚡ ¡Hola! Gracias por comunicarte con Somos Modo Activo. ¿Qué te gustaría consultar?</p>
             </div>
 
             <div class="chat-choices">
@@ -236,3 +236,61 @@ if ('IntersectionObserver' in window) {
     });
   }
 })();
+
+// ===== DATOS RÁPIDOS + PREGUNTAS FRECUENTES =====
+(() => {
+  // Agrega información útil al panel INFO ⚡
+  const quickGrid = document.querySelector('.quick-info-grid');
+  if (quickGrid && !document.getElementById('quickAgeInfo')) {
+    quickGrid.insertAdjacentHTML('beforeend', `
+      <a href="#faq" class="quick-info-item" id="quickAgeInfo">
+        <span>👧👦</span>
+        <div>
+          <strong>Edades: 6 a 15 años</strong>
+          <small>Adaptamos juegos y desafíos según la edad y las características del grupo.</small>
+        </div>
+      </a>
+
+      <a href="#faq" class="quick-info-item" id="quickBudgetInfo">
+        <span>💰</span>
+        <div>
+          <strong>Presupuesto personalizado</strong>
+          <small>Se define según la cantidad de chicos y la duración de la animación.</small>
+        </div>
+      </a>
+    `);
+  }
+
+  // Agrega una aclaración breve en la sección de reserva.
+  const bookingHead = document.querySelector('.booking-head');
+  if (bookingHead && !document.getElementById('bookingCustomNote')) {
+    bookingHead.insertAdjacentHTML('beforeend', `
+      <p id="bookingCustomNote" style="margin:14px auto 0;max-width:680px;line-height:1.6;font-weight:700;">
+        Cada cumple es distinto. Contanos la edad, cantidad de chicos, duración y lugar,
+        y armamos una propuesta a medida.
+      </p>
+    `);
+  }
+
+  // Agrega nuevas preguntas frecuentes.
+  const faqList = document.querySelector('.faq-list');
+  if (faqList && !document.getElementById('faqAges')) {
+    faqList.insertAdjacentHTML('beforeend', `
+      <details id="faqAges">
+        <summary>¿Qué edades pueden participar?</summary>
+        <p>Trabajamos con chicos de 6 a 15 años. Adaptamos los juegos, desafíos y la dinámica según la edad y las características de cada grupo.</p>
+      </details>
+
+      <details id="faqRain">
+        <summary>¿Qué pasa si llueve?</summary>
+        <p>Si el festejo es al aire libre y no cuenta con un espacio cubierto, la actividad puede suspenderse o reprogramarse. Esto se coordina previamente con la familia según el lugar y las condiciones del día.</p>
+      </details>
+
+      <details id="faqBudget">
+        <summary>¿Cómo se calcula el presupuesto?</summary>
+        <p>El presupuesto es personalizado y se define principalmente según la cantidad de chicos y la duración de la animación.</p>
+      </details>
+    `);
+  }
+})();
+
