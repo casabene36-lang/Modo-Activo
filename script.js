@@ -54,7 +54,7 @@ if ('IntersectionObserver' in window) {
         <div class="chat-content">
           <div id="queryMenu">
             <div class="bubble bot">
-              <p>👋⚡ ¡Hola! Elegí una opción y te llevamos a nuestro WhatsApp Business con el mensaje listo para enviar.</p>
+              <p>👋⚡ ¡Hola! Bienvenido/a a Somos Modo Activo. ¿En qué podemos ayudarte? Elegí una opción 👇</p>
             </div>
 
             <div class="chat-choices">
