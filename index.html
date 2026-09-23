@@ -22,7 +22,54 @@
         </div>
       </a>
 
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      <button class="menu-btn menu-info-btn" id="menuBtn" aria-label="Abrir información" aria-expanded="false"><span>INFO</span><b>⚡</b></button>
+        <div class="quick-info-panel" id="quickInfoPanel" hidden>
+          <div class="quick-info-head">
+            <div>
+              <small>MODO ACTIVO</small>
+              <strong>Información rápida</strong>
+            </div>
+            <button type="button" id="quickInfoClose" aria-label="Cerrar">×</button>
+          </div>
+
+          <div class="quick-info-grid">
+            <a href="#que-hacemos" class="quick-info-item">
+              <span>🎉</span>
+              <div>
+                <strong>Cumples en movimiento</strong>
+                <small>Juegos, deporte y desafíos para que todos participen.</small>
+              </div>
+            </a>
+
+            <a href="#experiencia" class="quick-info-item">
+              <span>⚽</span>
+              <div>
+                <strong>Actividades adaptadas</strong>
+                <small>Nos ajustamos a la edad, cantidad de chicos y espacio.</small>
+              </div>
+            </a>
+
+            <a href="#incluye" class="quick-info-item">
+              <span>✅</span>
+              <div>
+                <strong>¿Qué incluye?</strong>
+                <small>Planificación, juegos organizados y acompañamiento durante el evento.</small>
+              </div>
+            </a>
+
+            <a href="#reservar" class="quick-info-item">
+              <span>📅</span>
+              <div>
+                <strong>Cómo reservar</strong>
+                <small>Nos pasás fecha, edades, cantidad aproximada y zona.</small>
+              </div>
+            </a>
+          </div>
+
+          <button type="button" class="quick-info-cta" id="quickInfoConsult">
+            💬 Hacer una consulta
+          </button>
+        </div>
 
       <nav id="navMenu">
         <a href="#propuesta">Qué hacemos</a>
@@ -181,7 +228,7 @@
       </div>
     </section>
 
-    <section class="section included">
+    <section class="section included" id="incluye">
       <div class="container included-grid">
         <div>
           <span class="eyebrow">¿QUÉ INCLUYE LA PROPUESTA?</span>
@@ -294,12 +341,6 @@
       <small>© <span id="year"></span> Modo Activo</small>
     </div>
   </footer>
-
-  <a class="whatsapp-float" target="_blank" aria-label="WhatsApp" href="https://wa.me/5491167859172?text=Hola!%20Quiero%20consultar%20por%20Modo%20Activo%20⚡">
-    <span>💬</span>
-    <small>CONSULTAR</small>
-  </a>
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
