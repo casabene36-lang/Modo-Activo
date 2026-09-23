@@ -1,0 +1,21 @@
+MODO ACTIVO - MEJORAS V2
+
+1) Reemplazá el archivo enhancements.js actual de GitHub por el enhancements.js de este ZIP.
+   Debe quedar en la raíz del repositorio, junto a index.html y script.js.
+
+2) En index.html ya debería existir:
+   <script src="enhancements.js?v=1"></script>
+   Cambialo por:
+   <script src="enhancements.js?v=2"></script>
+   Esto fuerza al navegador a cargar la versión nueva.
+
+3) Abrí SEO_HEAD.txt y reemplazá las metas del <head> de index.html por ese bloque.
+   Esto corrige también la URL de la imagen de preview (.png.PNG) y el og:url.
+
+La nueva versión agrega:
+- Configurador "Armá tu festejo" que genera la consulta completa para WhatsApp.
+- Tarjetas por edades: 6-8, 9-11 y 12-15 años.
+- Sección sobre espacios y Plan B por lluvia.
+- Barra fija de consulta en celular.
+- Asistente de consultas que primero pregunta: Cumpleaños o Evento.
+- Textos y metadatos actualizados para cumpleaños + eventos.
