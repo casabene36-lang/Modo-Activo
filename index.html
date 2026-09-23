@@ -10,6 +10,97 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@500;600;700;800;900&family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .review-section{
+      padding:72px 0;
+      background:#f6f6f2;
+    }
+    .review-wrap{
+      display:grid;
+      grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+      gap:36px;
+      align-items:start;
+    }
+    .review-copy h2{
+      margin:10px 0 14px;
+    }
+    .review-copy p{
+      line-height:1.7;
+      max-width:560px;
+    }
+    .review-card{
+      background:#fff;
+      border:2px solid #0b0d0c;
+      border-radius:22px;
+      padding:24px;
+      box-shadow:7px 7px 0 #75ff2d;
+    }
+    .review-form{
+      display:grid;
+      gap:16px;
+    }
+    .review-form label{
+      display:grid;
+      gap:7px;
+      font-weight:800;
+      font-family:Montserrat, sans-serif;
+    }
+    .review-form input,
+    .review-form select,
+    .review-form textarea{
+      width:100%;
+      box-sizing:border-box;
+      border:2px solid #0b0d0c;
+      border-radius:12px;
+      padding:12px 13px;
+      background:#fff;
+      color:#0b0d0c;
+      font:600 15px/1.4 Montserrat, sans-serif;
+    }
+    .review-form textarea{
+      resize:vertical;
+      min-height:120px;
+    }
+    .review-permission{
+      display:flex !important;
+      grid-template-columns:none !important;
+      align-items:flex-start;
+      gap:10px !important;
+      font-size:13px;
+      line-height:1.45;
+      font-weight:600 !important;
+    }
+    .review-permission input{
+      width:18px;
+      min-width:18px;
+      height:18px;
+      margin-top:2px;
+      accent-color:#75ff2d;
+    }
+    .review-submit{
+      min-height:50px;
+      border:2px solid #0b0d0c;
+      border-radius:999px;
+      background:#75ff2d;
+      color:#0b0d0c;
+      font:900 14px/1 Montserrat, sans-serif;
+      cursor:pointer;
+      box-shadow:4px 4px 0 #0b0d0c;
+    }
+    .review-note{
+      margin:0;
+      font-size:12px;
+      line-height:1.5;
+      opacity:.72;
+    }
+    @media(max-width:800px){
+      .review-section{padding:54px 0;}
+      .review-wrap{grid-template-columns:1fr;gap:24px;}
+      .review-card{padding:20px;box-shadow:5px 5px 0 #75ff2d;}
+    }
+  </style>
+
 </head>
 <body>
   <header class="header">
@@ -92,6 +183,7 @@
         <a href="#experiencia">La experiencia</a>
         <a href="#reservar">Cómo reservar</a>
         <a href="#faq">Preguntas</a>
+        <a href="#opiniones">Opiniones</a>
         <a class="nav-cta" target="_blank" href="https://wa.me/5491167859172?text=Hola!%20Quiero%20consultar%20disponibilidad%20para%20Modo%20Activo%20⚡">Consultar fecha</a>
       </nav>
     </div>
@@ -166,6 +258,22 @@
           Armamos una propuesta pensada para la edad, el grupo y el espacio,
           con actividades que mantienen a los chicos participando y pasándola bien.
         </p>
+      </div>
+    </section>
+
+
+    <section class="section" id="nosotros">
+      <div class="container">
+        <div class="parent-card">
+          <div>
+            <span class="eyebrow">QUIÉNES SOMOS</span>
+            <h2>Una propuesta para que <span>todos entren en juego.</span></h2>
+          </div>
+          <p>
+            Somos Modo Activo, una propuesta de animación deportiva y recreativa
+            para cumpleaños de chicos de 6 a 15 años.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -345,6 +453,58 @@
       </div>
     </section>
 
+
+    <section class="review-section" id="opiniones">
+      <div class="container review-wrap">
+        <div class="review-copy">
+          <span class="eyebrow">TU EXPERIENCIA TAMBIÉN CUENTA</span>
+          <h2>¿Cómo vivieron <span>Modo Activo?</span></h2>
+          <p>
+            Si ya compartieron un festejo con nosotros, pueden dejarnos su opinión.
+            Sus comentarios nos ayudan a seguir mejorando y a que otras familias conozcan la experiencia.
+          </p>
+        </div>
+
+        <div class="review-card">
+          <form class="review-form" id="reviewForm">
+            <label>
+              Nombre de la familia o adulto responsable
+              <input type="text" id="reviewName" maxlength="60" placeholder="Ej.: Familia Gómez">
+            </label>
+
+            <label>
+              ¿Cómo fue la experiencia?
+              <select id="reviewRating" required>
+                <option value="">Elegí una puntuación</option>
+                <option value="5">⭐⭐⭐⭐⭐ Excelente</option>
+                <option value="4">⭐⭐⭐⭐ Muy buena</option>
+                <option value="3">⭐⭐⭐ Buena</option>
+                <option value="2">⭐⭐ Regular</option>
+                <option value="1">⭐ Puede mejorar</option>
+              </select>
+            </label>
+
+            <label>
+              Contanos tu experiencia
+              <textarea id="reviewText" maxlength="700" placeholder="¿Qué fue lo que más les gustó?" required></textarea>
+            </label>
+
+            <label class="review-permission">
+              <input type="checkbox" id="reviewPermission">
+              <span>Autorizo a que esta opinión pueda ser compartida en la web o en las redes de Modo Activo.</span>
+            </label>
+
+            <button type="submit" class="review-submit">💬 Enviar opinión por WhatsApp</button>
+
+            <p class="review-note">
+              La opinión se envía directamente a nuestro WhatsApp Business y no se publica automáticamente.
+              No hace falta incluir datos personales de los chicos.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <section class="final-cta">
       <div class="container final-card">
         <div class="final-logo">
@@ -373,6 +533,37 @@
       <small>© <span id="year"></span> Modo Activo</small>
     </div>
   </footer>
-<script src="script.js?v=10"></script>
+<script src="script.js?v=12"></script>
+
+<script>
+(() => {
+  const reviewForm = document.getElementById('reviewForm');
+  if (!reviewForm) return;
+
+  reviewForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('reviewName')?.value.trim() || 'No indicado';
+    const rating = document.getElementById('reviewRating')?.value;
+    const opinion = document.getElementById('reviewText')?.value.trim();
+    const permission = document.getElementById('reviewPermission')?.checked ? 'Sí' : 'No';
+
+    if (!rating || !opinion) return;
+
+    const stars = '⭐'.repeat(Number(rating));
+    const message =
+`Hola! 👋 Queremos dejar una opinión sobre Somos Modo Activo ⚡
+
+👤 Familia / adulto: ${name}
+⭐ Calificación: ${stars} (${rating}/5)
+💬 Opinión: ${opinion}
+📣 ¿Puede compartirse públicamente?: ${permission}`;
+
+    window.location.href =
+      `https://wa.me/5491167859172?text=${encodeURIComponent(message)}`;
+  });
+})();
+</script>
+
 </body>
 </html>
